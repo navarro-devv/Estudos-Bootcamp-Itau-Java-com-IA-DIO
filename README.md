@@ -4,9 +4,9 @@ Meu primeiro repositório, criado para aprender a utilizar o GitHub e organizar 
 
 ## Exercícios de Java
 
-Os exercícios de lógica de programação e suas respectivas propostas estão documentados em [`exercicios/README.md`](exercicios/README.md). O código está em [`exercicios/Main.java`](exercicios/Main.java).
+Os enunciados e as orientações para executar os exercícios estão em [`exercicios/README.md`](exercicios/README.md). O código está em [`exercicios/Main.java`](exercicios/Main.java), mantendo a lógica original enviada por mim e com um menu para escolher qual exercício executar.
 
-Para compilar e executar a partir da raiz do repositório:
+Com o JDK instalado, compile e execute a partir da raiz do repositório:
 
 ```bash
 javac exercicios/Main.java

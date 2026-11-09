@@ -1,131 +1,123 @@
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
 
-    public static void main(String[] args) {
-        try (Scanner scanner = new Scanner(System.in)) {
-            System.out.println("===== Exercícios de Java =====");
-            System.out.println("1: Tabuada");
-            System.out.println("2: Cálculo do IMC");
-            System.out.println("3: Pares ou ímpares no intervalo");
-            System.out.println("4: Divisões com resto zero");
-            System.out.print("Escolha um exercício: ");
+    public static void main(String[] args) throws IOException {
+        System.out.println("===== Exercícios de Java =====");
+        System.out.println("1: Tabuada");
+        System.out.println("2: Cálculo do IMC");
+        System.out.println("3: Pares ou ímpares");
+        System.out.println("4: Divisão com resto zero");
+        System.out.println("Escolha um exercício: ");
 
-            int escolha = scanner.nextInt();
-            switch (escolha) {
-                case 1 -> exercicio1(scanner);
-                case 2 -> exercicio2(scanner);
-                case 3 -> exercicio3(scanner);
-                case 4 -> exercicio4(scanner);
-                default -> System.out.println("Opção inválida.");
+        int escolha = System.in.read() - '0';
+        switch (escolha) {
+            case 1:
+                exercicio1();
+                break;
+            case 2:
+                exercicio2();
+                break;
+            case 3:
+                exercicio3();
+                break;
+            case 4:
+                exercicio4();
+                break;
+            default:
+                System.out.println("Opção inválida.");
+        }
+    }
+
+    public static void exercicio1 () {
+        var scanner = new Scanner (System.in);
+        System.out.println("Insira um número de 1 à 10: ");
+        var num = scanner.nextInt();
+        System.out.printf("===== Tabuada do %s =====\n", num);
+        for (var i = 1; i <= 10; i++) {
+            var res = num * i;
+            System.out.printf("%s x %s = %s\n", num, i, res);
+        }
+    }
+
+    public static void exercicio2 () {
+        var scan = new Scanner(System.in);
+        System.out.println("Insira a sua altura: ");
+        float altura = Float.parseFloat(scan.next());
+        System.out.println("Insira o seu peso (em kg): ");
+        var peso = scan.nextInt();
+        float imc = peso / (altura * altura);
+        System.out.printf("Seu IMC é de: %s\n", imc);
+        if (imc <= 18.5) {
+            System.out.println("Você está baixo do peso.");
+        } else if (imc < 24.9) {
+            System.out.println("Você está com o peso ideal.");
+        } else if (imc < 29.9) {
+            System.out.println("Você está levemente acima do peso.");
+        } else if (imc < 34.9) {
+            System.out.println("Você está com obesidade grau I.");
+        } else if (imc < 39.9) {
+            System.out.println("Você está com obesidade grau II (Severa).");
+        } else {
+            System.out.println("Você está com obesidade grau III (Mórbida).");
             }
         }
-    }
 
-    // Lê um número e exibe a tabuada de 1 a 10.
-    public static void exercicio1(Scanner scanner) {
-        System.out.print("Insira um número de 1 a 10: ");
-        int numero = scanner.nextInt();
-        System.out.printf("===== Tabuada do %d =====%n", numero);
-
-        for (int multiplicador = 1; multiplicador <= 10; multiplicador++) {
-            System.out.printf("%d x %d = %d%n", numero, multiplicador,
-                    numero * multiplicador);
-        }
-    }
-
-    // Calcula o IMC e apresenta a classificação correspondente.
-    public static void exercicio2(Scanner scanner) {
-        System.out.print("Insira a sua altura em metros: ");
-        double altura = scanner.nextDouble();
-        System.out.print("Insira o seu peso em kg: ");
-        double peso = scanner.nextDouble();
-
-        if (altura <= 0 || peso <= 0) {
-            System.out.println("Altura e peso devem ser maiores que zero.");
-            return;
-        }
-
-        double imc = peso / (altura * altura);
-        System.out.printf("Seu IMC é de: %.2f%n", imc);
-
-        if (imc <= 18.5) {
-            System.out.println("Você está abaixo do peso.");
-        } else if (imc < 25.0) {
-            System.out.println("Você está com o peso ideal.");
-        } else if (imc < 30.0) {
-            System.out.println("Você está levemente acima do peso.");
-        } else if (imc < 35.0) {
-            System.out.println("Você está com obesidade grau I.");
-        } else if (imc < 40.0) {
-            System.out.println("Você está com obesidade grau II (severa).");
-        } else {
-            System.out.println("Você está com obesidade grau III (mórbida).");
-        }
-    }
-
-    // Exibe os números pares ou ímpares do intervalo, em ordem decrescente.
-    public static void exercicio3(Scanner scanner) {
-        System.out.print("Insira o primeiro número: ");
-        int primeiro = scanner.nextInt();
-        System.out.print("Insira um número maior que o primeiro: ");
-        int segundo = scanner.nextInt();
-
-        if (segundo <= primeiro) {
-            System.out.println("O segundo número deve ser maior que o primeiro.");
-            return;
-        }
-
-        System.out.println("Escolha entre par ou ímpar:");
+    public static void exercicio3 () {
+        var scan = new Scanner(System.in);
+        System.out.println("===== Par ou Ímpar =====");
+        System.out.println("Insira um número: ");
+        var num1 = scan.nextInt();
+        System.out.println("Insira um número maior que o primeiro: ");
+        var num2 = scan.nextInt();
+        System.out.println("Escolha entre par ou ímpar: ");
         System.out.println("1: ímpar");
         System.out.println("2: par");
-        int escolha = scanner.nextInt();
-
-        if (escolha != 1 && escolha != 2) {
-            System.out.println("Opção inválida.");
-            return;
-        }
-
-        System.out.println(escolha == 2
-                ? "Exibindo intervalo dos pares em ordem decrescente:"
-                : "Exibindo intervalo dos ímpares em ordem decrescente:");
-
-        for (int numero = segundo; ; numero--) {
-            if ((escolha == 2 && numero % 2 == 0)
-                    || (escolha == 1 && numero % 2 != 0)) {
-                System.out.println(numero);
+        var escolha = scan.nextInt();
+        if (escolha == 2) {
+            System.out.println("Exibindo intervalo dos pares");
+            for (var i = num1; i <= num2; i++) {
+                if (i % 2 == 0) {
+                    System.out.println(i);
+                }
             }
-            if (numero == primeiro) {
-                break;
+        } else if (escolha == 1) {
+            System.out.println("Exibindo intervalo dos ímpares");
+            for (var i = num1; i <= num2; i++) {
+                if (i % 2 != 0) {
+                    System.out.println(i);
+                }
             }
         }
     }
 
-    // Continua com múltiplos do número inicial e encerra no primeiro resto não zero.
-    public static void exercicio4(Scanner scanner) {
-        System.out.print("Insira um número inicial fixo: ");
-        int inicial = scanner.nextInt();
+    public static void exercicio4 () {
+        var scan = new Scanner(System.in);
 
-        if (inicial == 0) {
+        System.out.println("Insira um número inicial fixo: ");
+        var num1 = scan.nextInt();
+
+        if (num1 == 0) {
             System.out.println("O número inicial não pode ser zero.");
             return;
         }
 
         while (true) {
-            System.out.print("Insira um número para ser dividido: ");
-            int numero = scanner.nextInt();
+            System.out.println("Insira um número para ser divido: ");
+            var num2 = scan.nextInt();
 
-            if (numero < inicial) {
+            if (num2 < num1) {
                 System.out.println("Número ignorado!");
                 continue;
             }
 
-            if (numero % inicial != 0) {
-                System.out.println("Divisão com resto maior que 0. Encerrando...");
-                break;
+            if (num2 % num1 != 0) {
+                    System.out.println("Divisão com resto maior que 0. Encerrando...");
+                    break;
             }
 
             System.out.println("Divisão com resto zero!");
+            }
         }
-    }
 }

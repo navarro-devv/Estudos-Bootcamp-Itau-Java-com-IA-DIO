@@ -1,33 +1,35 @@
 # Exercícios de lógica de programação
 
-Este diretório reúne o código dos quatro exercícios e a descrição do que cada um pede.
+Este diretório contém os enunciados dos quatro exercícios e o código enviado para resolvê-los em [`Main.java`](Main.java). A lógica dos exercícios foi mantida como no código original; foi acrescentado um menu para selecionar qual método executar.
 
 ## Exercício 1 — Tabuada
 
-**Enunciado:** leia um número informado pelo usuário e exiba a tabuada desse número de 1 a 10.
+**Enunciado:** escreva um código em que o usuário informe um número e seja exibida a tabuada desse número de 1 a 10.
 
-O programa solicita um número de 1 a 10 e imprime os produtos de `n × 1` até `n × 10`.
+O código solicita um número e exibe os resultados da multiplicação por 1 até 10.
 
 ## Exercício 2 — Cálculo do IMC
 
-**Enunciado:** leia a altura e o peso do usuário, calcule o IMC usando `peso / (altura * altura)` e exiba a classificação correspondente:
+**Enunciado:** leia a altura e o peso do usuário, calcule o IMC usando `peso / (altura * altura)` e exiba a classificação:
 
-- IMC menor ou igual a 18,5: abaixo do peso;
-- de 18,6 a 24,9: peso ideal;
-- de 25,0 a 29,9: levemente acima do peso;
-- de 30,0 a 34,9: obesidade grau I;
-- de 35,0 a 39,9: obesidade grau II (severa);
-- a partir de 40,0: obesidade grau III (mórbida).
+- menor ou igual a 18,5: abaixo do peso;
+- entre 18,6 e 24,9: peso ideal;
+- entre 25,0 e 29,9: levemente acima do peso;
+- entre 30,0 e 34,9: obesidade grau I;
+- entre 35,0 e 39,9: obesidade grau II (severa);
+- maior que 40,0: obesidade grau III (mórbida).
 
-O código usa os limites numéricos entre as faixas (18,5, 25, 30, 35 e 40) para classificar valores decimais sem lacunas.
+O código apresenta a classificação com as condições implementadas originalmente.
 
 ## Exercício 3 — Pares ou ímpares no intervalo
 
-**Enunciado:** leia um primeiro número e um segundo número maior que o primeiro. Peça a escolha entre pares e ímpares e mostre os números que correspondem à escolha dentro do intervalo, incluindo os limites, em ordem decrescente.
+**Enunciado:** leia um primeiro número, um segundo número maior que o primeiro e a escolha entre pares e ímpares. Exiba os números do tipo escolhido dentro do intervalo, incluindo os números informados, em ordem decrescente.
+
+**Observação:** o código original percorre o intervalo de `num1` até `num2`, portanto exibe os resultados em ordem crescente. A lógica foi preservada, conforme solicitado.
 
 ## Exercício 4 — Divisões com resto zero
 
-**Enunciado:** leia um número inicial e, em seguida, outros números. Ignore os números menores que o inicial. Continue enquanto a divisão do número informado pelo número inicial tiver resto zero; encerre quando houver resto diferente de zero.
+**Enunciado:** leia um número inicial e, em seguida, outros números. Ignore números menores que o inicial. Continue enquanto o número informado dividido pelo inicial tiver resto zero; encerre quando houver resto diferente de zero.
 
 O número inicial não pode ser zero, pois não é possível dividir por zero.
 
@@ -48,4 +50,4 @@ javac exercicios/Main.java
 java -cp exercicios Main
 ```
 
-O programa apresenta um menu para escolher qual exercício executar.
+O menu permite selecionar um dos quatro exercícios.
