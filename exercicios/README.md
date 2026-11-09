@@ -1,6 +1,6 @@
 # Exercícios de lógica de programação
 
-Este diretório contém os enunciados dos quatro exercícios e o código enviado para resolvê-los em [`Main.java`](Main.java). A lógica dos exercícios foi mantida como no código original; foi acrescentado um menu para selecionar qual método executar.
+Este diretório contém os enunciados dos quatro exercícios e o código enviado para resolvê-los em [`Main.java`](Main.java). Solicitei para o Copilot acrescentar apenas um pequeno menu com "cases" no início do script do meu código, para facilitar a seleção/execução de qual método (sendo cada metódo uma resolução) escolher que preferir avaliar.
 
 ## Exercício 1 — Tabuada
 
