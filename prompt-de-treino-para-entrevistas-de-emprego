@@ -1,43 +1,43 @@
-Este é um prompt modelado por mim a partir do prompt de Eliana Andrade, Tech Educational Analyst da DIO,
-no módulo "Introdução à Engenharia de Prompts" do Bootcamp.
+# Prompt de treino para entrevistas de emprego
 
--------------------
-PROMPT
--------------------
+> Este é um prompt modelado por mim a partir do prompt de Eliana Andrade, Tech Educational Analyst da DIO, no módulo "Introdução à Engenharia de Prompts" do Bootcamp.
 
-Simule uma entrevista de emprego específica para a vaga do link abaixo, considerando: 
- 
-Link da vaga: 
+---
 
-Máximo de perguntas a serem feitas: 
+## Prompt
 
-Observações: 
- 
+Simule uma entrevista de emprego específica para a vaga do link abaixo, considerando:
 
------ Passo 1: Pergunta Inicial -----
- 
-Faça a primeira pergunta mais provável de ser feita na entrevista. 
- 
------ Passo 2: Minha Resposta ----- 
- 
-Eu responderei à pergunta como se estivesse participando de uma entrevista real. 
-  
------ Passo 3: Prossiga com a entrevista até fazer todas as perguntas (dentro do limite estabelecido). -----
- 
------ Passo 4: Feedback -----
- 
+- **Link da vaga:**
+- **Máximo de perguntas a serem feitas:**
+- **Observações:**
+
+### Passo 1: Pergunta Inicial
+
+Faça a primeira pergunta mais provável de ser feita na entrevista.
+
+### Passo 2: Minha Resposta
+
+Eu responderei à pergunta como se estivesse participando de uma entrevista real.
+
+### Passo 3: Continuação da entrevista
+
+Prossiga com a entrevista até fazer todas as perguntas (dentro do limite estabelecido).
+
+### Passo 4: Feedback
+
 Faça uma avaliação geral da minha performance e indique os principais pontos da entrevista, mencionando:
- 
-- O que foi bom. 
-- O que pode ser melhorado. 
-- Sugestões para aprimorar a resposta com exemplos contextualizados. 
-- Dicas de como melhorar ainda mais minha performance na entrevista. 
-- Avalie se minha resposta transmite segurança, clareza e profissionalismo. 
 
+- O que foi bom.
+- O que pode ser melhorado.
+- Sugestões para aprimorar a resposta com exemplos contextualizados.
+- Dicas de como melhorar ainda mais minha performance na entrevista.
+- Avalie se minha resposta transmite segurança, clareza e profissionalismo.
 
-Importante: 
-- Conduza a entrevista como um entrevistador real. 
-- Não entregue a resposta antes que eu tente responder. 
-- Varie entre perguntas técnicas, comportamentais e sobre experiências profissionais quando fizer sentido. 
-- Aumente gradualmente a dificuldade das perguntas. 
-- Não seja excessivamente fácil comigo: faça perguntas que realmente poderiam aparecer em uma entrevista. 
+### Importante
+
+- Conduza a entrevista como um entrevistador real.
+- Não entregue a resposta antes que eu tente responder.
+- Varie entre perguntas técnicas, comportamentais e sobre experiências profissionais quando fizer sentido.
+- Aumente gradualmente a dificuldade das perguntas.
+- Não seja excessivamente fácil comigo: faça perguntas que realmente poderiam aparecer em uma entrevista.
